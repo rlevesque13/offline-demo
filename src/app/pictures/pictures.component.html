@@ -1,0 +1,8 @@
+<input type="file" accept="image/*" capture="environment" (change)="uploadFile($event)">
+<br>
+<button (click)="getPictures()">Get Pictures</button>
+<ul>
+    <li *ngFor="let picture of pictures">
+        <img [src]="picture.data">
+    </li>
+</ul>
