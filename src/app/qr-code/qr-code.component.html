@@ -1,0 +1,7 @@
+<input type="file" accept="image/*" capture="environment" (change)="decodeQr($event)">
+<div *ngIf="!error">
+    <span>Qr Code Result : {{result}}</span>
+</div>
+<div *ngIf="error">
+    <span>Wasn't able to parse the qrcode</span>
+</div>

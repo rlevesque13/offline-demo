@@ -1,27 +1,27 @@
 import { Injectable } from '@angular/core';
 import Dexie from 'dexie';
-import { Note } from './shared/note.model';
+import { Video } from './shared/video.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class NotesIndexedDbService {
+export class VideosIndexedDbService {
   dbVersion = 1;
   db: Dexie;
-  notes: Dexie.Table<Note>;
+  videos: Dexie.Table<Video>;
 
   constructor() {
-    this.db = new Dexie('notes');
+    this.db = new Dexie('videos');
     this.db.version(this.dbVersion).stores({
-      notes: '++id, text'
+      videos: '++id'
     });
 
-    this.notes = this.db.table('notes');
+    this.videos = this.db.table('videos');
   }
 
-  public AddNote(note: Note) {
-    this.notes
-      .put(note)
+  public Add(video: Video) {
+    this.videos
+      .put(video)
       .then(async () => {
         console.log('Saved in DB');
       })
@@ -30,7 +30,7 @@ export class NotesIndexedDbService {
       });
   }
 
-  public GetNotes(): Promise<Note[]> {
-    return this.notes.toArray();
+  public Get(): Promise<Video[]> {
+    return this.videos.limit(100).toArray();
   }
 }

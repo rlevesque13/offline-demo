@@ -1,0 +1,11 @@
+<input type="file" accept="audio/*;capture=microphone" (change)="uploadFile($event)">
+<br>
+<button (click)="getRecordings()">Get Recordings</button>
+<ul>
+    <li *ngFor="let recording of recordings">
+        <span>Id : {{recording.id}}</span>
+        <audio controls>
+            <source [src]="getSafeUrl(recording)" type="audio/mpeg">
+          </audio>
+    </li>
+</ul>

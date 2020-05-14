@@ -1,0 +1,11 @@
+<input type="file" accept="video/*;capture=camcorder" (change)="uploadFile($event)">
+<br>
+<button (click)="getVideos()">Get Videos</button>
+<ul>
+    <li *ngFor="let video of videos">
+        <span>Id : {{video.id}}</span>
+        <video width="320" height="240" controls>
+            <source [src]="getSafeUrl(video)" type="video/mp4">
+        </video>
+    </li>
+</ul>

@@ -7,13 +7,21 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { PicturesComponent } from './pictures/pictures.component';
-import { AudioComponent } from './audio/audio.component';
+import { RecordingsComponent } from './recordings/recordings.component';
+import { GeolocationComponent } from './geolocation/geolocation.component';
+import { VideosComponent } from './videos/videos.component';
+import { QrCodeComponent } from './qr-code/qr-code.component';
+import { VideoStreamComponent } from './video-stream/video-stream.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PicturesComponent,
-    AudioComponent
+    RecordingsComponent,
+    GeolocationComponent,
+    VideosComponent,
+    QrCodeComponent,
+    VideoStreamComponent
   ],
   imports: [
     BrowserModule,
