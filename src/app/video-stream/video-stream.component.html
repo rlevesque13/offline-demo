@@ -1,1 +1,7 @@
-<p>video-stream works!</p>
+<video id="videoPlayer" autoplay #videoPlayer></video>
+<div *ngIf="stopped">
+    <button (click)="startRecording()">Start Recording</button>
+</div>
+<div *ngIf="!stopped">
+    <button (click)="stopRecording()">Stop Recording</button>
+</div>

@@ -40,6 +40,4 @@ export class VideosComponent implements OnInit {
         this.videos = videos;
       });
   }
-
-  
 }

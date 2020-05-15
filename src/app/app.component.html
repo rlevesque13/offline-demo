@@ -1,21 +1,27 @@
-<ul>
-  <li>
-    <a routerLink="/pictures" routerLinkActive="active">Pictures</a>
-  </li>
-  <li>
-    <a routerLink="/recordings" routerLinkActive="active">Recordings</a>
-  </li>
-  <li>
-    <a routerLink="/geolocation" routerLinkActive="active">Geolocation</a>
-  </li>
-  <li>
-    <a routerLink="/videos" routerLinkActive="active">Videos</a>
-  </li>
-  <li>
-    <a routerLink="/video-stream" routerLinkActive="active">Video Stream</a>
-  </li>
-  <li>
-    <a routerLink="/qr-code" routerLinkActive="active">Qr Code</a>
-  </li>
-</ul>
+<div id="navBar">
+  <ul>
+    <li>
+      <a routerLink="/pictures" routerLinkActive="active">Pictures</a>
+    </li>
+    <li>
+      <a routerLink="/recordings" routerLinkActive="active">Recordings</a>
+    </li>
+    <li>
+      <a routerLink="/geolocation" routerLinkActive="active">Geolocation</a>
+    </li>
+    <li>
+      <a routerLink="/videos" routerLinkActive="active">Videos</a>
+    </li>
+    <li>
+      <a routerLink="/video-stream" routerLinkActive="active">Video Stream</a>
+    </li>
+    <li>
+      <a routerLink="/qr-code" routerLinkActive="active">Qr Code</a>
+    </li>
+    <li>
+      <a routerLink="/bar-code-scanner" routerLinkActive="active">BarCode Scanner</a>
+    </li>
+  </ul>
+</div>
+<div id="offline-bar" *ngIf="!isOnline"><span>Offline Mode</span></div>
 <router-outlet></router-outlet>

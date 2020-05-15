@@ -12,6 +12,7 @@ import { GeolocationComponent } from './geolocation/geolocation.component';
 import { VideosComponent } from './videos/videos.component';
 import { QrCodeComponent } from './qr-code/qr-code.component';
 import { VideoStreamComponent } from './video-stream/video-stream.component';
+import { BarCodeScannerComponent } from './bar-code-scanner/bar-code-scanner.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { VideoStreamComponent } from './video-stream/video-stream.component';
     GeolocationComponent,
     VideosComponent,
     QrCodeComponent,
-    VideoStreamComponent
+    VideoStreamComponent,
+    BarCodeScannerComponent
   ],
   imports: [
     BrowserModule,

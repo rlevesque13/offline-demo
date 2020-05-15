@@ -1,0 +1,11 @@
+<div *ngIf="!deviceIsSelected">
+    <select [(ngModel)]="videoDeviceId" (change)="onDeviceSelected()">
+        <option *ngFor="let device of devices" [ngValue]="device.deviceId">{{device.label}}</option>
+      </select>
+</div>
+<div *ngIf="deviceIsSelected">
+    <button (click)="reset()">Reset</button>
+</div>
+  
+<video id="videoPlayer" autoplay #videoPlayer></video>
+<span>CodeBar is : {{code}}</span>

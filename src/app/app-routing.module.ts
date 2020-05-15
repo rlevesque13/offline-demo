@@ -6,6 +6,7 @@ import { GeolocationComponent } from './geolocation/geolocation.component';
 import { VideosComponent } from './videos/videos.component';
 import { QrCodeComponent } from './qr-code/qr-code.component';
 import { VideoStreamComponent } from './video-stream/video-stream.component';
+import { BarCodeScannerComponent } from './bar-code-scanner/bar-code-scanner.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'videos', component: VideosComponent },
   { path: 'qr-code', component: QrCodeComponent },
   { path: 'video-stream', component: VideoStreamComponent },
+  { path: 'bar-code-scanner', component: BarCodeScannerComponent },
   { path: '', component: PicturesComponent }
 ];
 

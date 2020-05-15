@@ -5,7 +5,7 @@
     <li *ngFor="let recording of recordings">
         <span>Id : {{recording.id}}</span>
         <audio controls>
-            <source [src]="getSafeUrl(recording)" type="audio/mpeg">
+            <source [src]="getSafeUrl(recording)" type="audio/mp4">
           </audio>
     </li>
 </ul>
