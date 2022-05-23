@@ -22,7 +22,7 @@
     "@angular/router": "~8.2.14",
     "@angular/service-worker": "~8.2.14",
     "@azure/ng-deploy": "^0.2.3",
-    "dexie": "^3.0.1",
+    "dexie": "^3.2.2",
     "qrcode-reader": "^1.0.4",
     "quagga": "^0.12.1",
     "rxjs": "~6.4.0",
